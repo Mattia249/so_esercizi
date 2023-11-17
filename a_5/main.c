@@ -57,7 +57,7 @@ int main() {
 
     init_array(chars, TOTAL_CHARS);
     
-    while((ch = getchar()) != EOF){
+    while((ch = getchar()) != EOF) {
         index = as_index(ch);
         if(index != -1){
             occurrence = chars[index];
