@@ -19,19 +19,22 @@ int main() {
         Conta tutti i caratteri != ' ' azzera quando si presenta uno ' ' o '\0'
     */
 
-    fgets(str, MAX_LENGTH, stdin);
-    printf("ricevuta: %s\n", str);
-    while(*str != '\0') {
-        if(!is_whitespace(*str)) { 
-            count++;
-        } else {
-            printf("conto: %d\n", count);
-            count = 0;
+    while(fgets(str, MAX_LENGTH, stdin) != NULL){
+
+        while(*str != '\0') {
+            if(!is_whitespace(*str)) { 
+                count++;
+            } else {
+                printf("conto: %d\n", count);
+                count = 0;
+            }
+            str++;
         }
-        str++;
+
+        count = 0;
+
     }
 
-    printf("conto: %d\n", count);
    
 
 }
