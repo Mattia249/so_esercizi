@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 
-#define NUM_KIDS 20
-
-
+#define NUM_KIDS 5
 
 int main() {
-    int i, num, status, res, child_pid, sum = 0;
-    
+    int i, num, status, res, sum = 0;
+    pid_t child_pid;
+
     for(i = 0; i < NUM_KIDS; i++) {
         child_pid = fork();
         if(child_pid == -1) {
@@ -34,5 +33,4 @@ int main() {
 
 
     printf("Parent ended\n");
-    
 }
