@@ -4,6 +4,8 @@
         "vector": "c",
         "cl_list.h": "c",
         "cstdlib": "c",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "string": "c",
+        "format": "c"
     }
 }
